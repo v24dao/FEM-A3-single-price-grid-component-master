@@ -138,6 +138,30 @@
         font-size: 1.5rem;
         color: var(--lightGray);
       }
+
+      @media (min-width: 600px) {
+        body {
+          /* Put our grid container in the middle of the screen*/
+          display: grid;
+          place-items: center;
+        }
+
+        .grid-container {
+          grid-template-columns: repeat(2, 1fr);
+          /* Set a width below 100% so that we always horizontal spacing outside the grid container. */
+          width: 95%;
+          max-width: 750px;
+        }
+
+        .grid-item {
+          /* Increase padding on bigger screens */
+          padding: 4rem;
+        }
+        .grid-item-1 {
+          /*  */
+          grid-column: 1 / span 2;
+        }
+      }
     </style>
   </head>
   <body>
