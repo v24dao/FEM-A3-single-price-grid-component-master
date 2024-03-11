@@ -20,9 +20,11 @@
 
       :root {
         --cyan: hsl(179, 62%, 43%);
+        --cyanHsl: 179, 62%, 43%;
         --brightYellow: hsl(71, 73%, 54%);
         --lightGray: hsl(204, 43%, 93%);
         --grayishBlue: hsl(218, 22%, 67%);
+        --curvedEdges: 0.5rem;
       }
       /* Base Reset */
       *,
@@ -44,6 +46,7 @@
 
       body {
         min-height: 100vh;
+        background-color: var(--lightGray);
       }
 
       img,
@@ -54,12 +57,92 @@
         max-width: 100%;
       }
 
-      /* Text */
+      /* General Text */
+      h1 {
+        color: var(--cyan);
+        font-weight: 700;
+        font-size: 2.5rem;
+        padding-bottom: 2rem;
+      }
+
+      h2 {
+        font-weight: 700;
+        font-size: 1.8rem;
+        padding-bottom: 2rem;
+      }
+
+      p {
+        font-size: 1.5rem;
+        line-height: 2.2rem;
+      }
+
+      /* Reusable Components */
+      .grid-container {
+        display: grid;
+        max-width: 350px;
+        margin: 2rem auto;
+        border-radius: var(--curvedEdges);
+        /* This ensures that all the grid-items do not overflow the container. Important for the curved corners. */
+        overflow: hidden;
+      }
+
+      .button {
+        background-color: var(--brightYellow);
+        text-align: center;
+        margin-top: 1.5rem;
+        padding: 1.5rem 0;
+        border-radius: var(--curvedEdges);
+      }
+
+      .button a {
+        text-decoration: none;
+        color: white;
+        font-weight: 700;
+        font-size: 1.5rem;
+      }
+
+      .grid-item {
+        background-color: white;
+        padding: 2rem;
+      }
+
+      /* Grid items */
+      .grid-item-1 {
+        color: var(--grayishBlue);
+      }
+
+      .grid-item-1 h2 {
+        color: var(--brightYellow);
+      }
+
+      .grid-item-2 {
+        background-color: var(--cyan);
+        color: white;
+      }
+
+      .grid-item-3 {
+        background-color: hsla(var(--cyanHsl), 0.7);
+        color: var(--lightGray);
+      }
+
+      .price {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1rem;
+      }
+      .price-amount {
+        font-size: 3rem;
+        padding-right: 1.5rem;
+      }
+      .price-term {
+        font-size: 1.5rem;
+        color: var(--lightGray);
+      }
     </style>
   </head>
   <body>
-    <div class="grid">
-      <div class="grid-item-1">
+    <div class="grid-container">
+      <div class="grid-item grid-item-1">
         <h1>Join our community</h1>
         <h2>30-day, hassle-free money back guarantee</h2>
         <p>
@@ -68,13 +151,17 @@
           skills.
         </p>
       </div>
-      <div class="grid-item-2">
+      <div class="grid-item grid-item-2">
         <h2>Monthly Subscription</h2>
-        <div class="price"><span>&dollar;29</span> per month</div>
+        <div class="price">
+          <span class="price-amount">&dollar;29</span>
+          <span class="price-term">per month</span>
+        </div>
+        <p>Full access for less than &dollar;1 a day</p>
+        <div class="button"><a href="#">Sign Up</a></div>
       </div>
-      <p>Full access for less than &dollar;1 a day</p>
-      <div class="button"><a href="#">Sign Up</a></div>
-      <div class="grid-item-3">
+
+      <div class="grid-item grid-item-3">
         <h2>Why Us</h2>
         <p>Tutorials by industry experts</p>
         <p>Peer &amp; expert code reviews</p>
