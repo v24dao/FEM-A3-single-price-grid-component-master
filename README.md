@@ -6,8 +6,26 @@
 
 ### What I've Learned:
 
-#### 1.
+#### 1. Avoiding overflowing content
+
+```CSS
+.grid-container{
+    /*This ensures curved edges on the grid regardless of screen size. Without overflow:hidden, we would need to change the border-radius on our grid-items for every screen size.*/
+    overflow: hidden;
+}
+```
+
+#### 2. Using 'width' in conjunction with 'max-width'
+
+```CSS
+.grid-container {
+          /* We set a width below 100% so that we always horizontal spacing between the grid container and the edge of the screen */
+          width: 95%;
+          max-width: 750px;
+        }
+```
 
 ### Challenge Screenshot:
 
-<img src="challenge-screenshot.png" width="300">
+<img src="challenge-screenshot-desktop.png" width="500">
+<img src="challenge-screenshot-mobile.png" width="300">
