@@ -14,10 +14,17 @@
 
     <title>Frontend Mentor | Single Price Grid Component</title>
 
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
     <style>
-      /* Base Reset */
+      /* Custom Colors/ Fonts */
+      @import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
 
+      :root {
+        --cyan: hsl(179, 62%, 43%);
+        --brightYellow: hsl(71, 73%, 54%);
+        --lightGray: hsl(204, 43%, 93%);
+        --grayishBlue: hsl(218, 22%, 67%);
+      }
+      /* Base Reset */
       *,
       *::before,
       *::after {
@@ -32,6 +39,7 @@
 
       html {
         font-size: 62.5%;
+        font-family: 'Karla', sans-serif;
       }
 
       body {
@@ -45,6 +53,8 @@
         display: block;
         max-width: 100%;
       }
+
+      /* Text */
     </style>
   </head>
   <body>
