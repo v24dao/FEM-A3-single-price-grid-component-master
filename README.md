@@ -26,7 +26,7 @@
         }
 ```
 
-### Challenge Screenshot:
+### Challenge Screenshots:
 
 <img src="challenge-screenshot-desktop.png" width="500">
 <img src="challenge-screenshot-mobile.png" width="300">
